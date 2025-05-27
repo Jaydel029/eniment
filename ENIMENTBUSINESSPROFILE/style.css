@@ -1,0 +1,314 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Top Banner */
+.eniment-banner {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: inset 0 -3px 6px rgba(255, 255, 255, 0.04);
+}
+
+.eniment-banner h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: 3px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.eniment-banner p {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #bbb;
+  font-size: 1.05rem;
+}
+
+/* Navigation */
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 0;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #ff6600;
+  outline: none;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* Layout Container */
+main {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Banner Image */
+.banner {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.banner:hover,
+.banner:focus {
+  transform: scale(1.03);
+  outline: none;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover,
+.hero-image:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+.hero h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 1.75rem 0 1rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 2.25rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #ff6600;
+  box-shadow: 0 6px 12px rgba(255, 102, 0, 0.5);
+  outline: none;
+}
+
+/* Features Section */
+.features {
+  margin-bottom: 4rem;
+}
+
+.features h3 {
+  color: #000;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.features li {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Testimonials */
+.testimonial-preview {
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.testimonial-preview h3 {
+  color: #000;
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.testimonial-preview blockquote {
+  color: #555;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #ff6600;
+  padding-left: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.6px;
+  font-weight: 400;
+  user-select: none;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background-color: #fdf6f0;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.12);
+  color: #222;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.mission-vision h1 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 2rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mission-vision p {
+  margin-bottom: 1.25rem;
+  font-size: 1.15rem;
+}
+
+.mission-vision strong {
+  color: #444;
+  font-weight: 700;
+}
+
+
+.new-arrivals,
+.store-highlights,
+.newsletter-signup,
+.social-links {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 700px;
+  padding: 2rem 1.5rem;
+}
+
+.new-arrivals p,
+.store-highlights ul,
+.newsletter-signup p,
+.social-links p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.store-highlights ul,
+.social-links .social-icons {
+  list-style: none;
+  padding: 0;
+}
+
+.store-highlights li {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.newsletter-signup form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.newsletter-signup input[type="email"] {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+}
+
+.social-links .social-icons a {
+  margin: 0 0.75rem;
+  text-decoration: none;
+  color: #ff6600;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.social-links .social-icons a:hover {
+  color: #000;
+}
+
