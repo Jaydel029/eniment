@@ -334,3 +334,58 @@ footer {
   margin-bottom: 10px;
   line-height: 1.6;
 }
+/* Responsive Styles for Tablets and Phones */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .eniment-banner h1 {
+    font-size: 2rem;
+  }
+
+  .eniment-banner p,
+  .hero p,
+  .features li,
+  .testimonial-preview blockquote,
+  .mission-vision p,
+  .new-arrivals p,
+  .store-highlights li,
+  .newsletter-signup p,
+  .basic-knowledge li {
+    font-size: 1rem;
+  }
+
+  .hero h2,
+  .features h3,
+  .testimonial-preview h3,
+  .mission-vision h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .newsletter-signup form {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .newsletter-signup input[type="email"] {
+    width: 90%;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  .hero-image,
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+}
