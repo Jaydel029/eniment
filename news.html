@@ -6,118 +6,140 @@
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff;
+    .mission-vision {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem 1.5rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       color: #222;
-      margin: 0;
       line-height: 1.6;
     }
 
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 1rem 1.5rem;
+    .mission-vision h1 {
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
       letter-spacing: 1.5px;
     }
 
-    nav {
-      margin-top: 0.5rem;
+    .mission-vision p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .mission-vision strong {
+      color: #444;
+    }
+
+    .section {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem 1.75rem;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      color: #222;
+      line-height: 1.6;
+      text-align: left;
+    }
+
+    .section h2 {
       text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      color: #000;
+      letter-spacing: 1.3px;
     }
 
-    nav a {
-      color: #ddd;
+    .section ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #000;
+      color: #fff;
+      padding: 0.7rem 1.75rem;
+      border-radius: 25px;
       text-decoration: none;
-      margin: 0 0.7rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      transition: background-color 0.3s ease;
     }
 
-    nav a:hover,
-    nav a:focus {
-      color: #ff6600;
+    .cta a:hover,
+    .cta a:focus {
+      background-color: #ff6600;
       outline: none;
     }
 
-    main {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+    }
+
+    #topBtn:hover {
+      background: #ff6600;
     }
 
     .banner {
       max-width: 100%;
       height: auto;
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin-bottom: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #222;
-      letter-spacing: 1.2px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #444;
-      margin: 0.8rem 0;
+      margin: 1rem auto 2rem auto;
     }
 
     .news-item {
-      background: #f9f9f9;
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
+      max-width: 700px;
+      margin: 1rem auto;
+      padding: 1.25rem 1.75rem;
+      background-color: #f9f9f9;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      text-align: left;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       color: #333;
+      font-size: 1.1rem;
     }
 
     .news-item time {
       display: block;
-      font-size: 0.85rem;
-      color: #999;
-      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.5rem;
     }
 
-    /* Facebook link design */
-    .fb-link {
+    .news-item a {
       color: #000;
       font-weight: bold;
-      text-decoration: none;
-      border-bottom: 2px solid #000;
-      transition: color 0.3s ease, border-color 0.3s ease;
+      text-decoration: underline;
     }
 
-    .fb-link:hover,
-    .fb-link:focus {
-      color: #444;
-      border-color: #444;
-      outline: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.2rem 0;
-      background-color: #f1f1f1;
-      color: #555;
-      font-size: 0.9rem;
-      margin-top: 3rem;
+    .news-item a:hover {
+      color: #ff6600;
     }
   </style>
 </head>
@@ -139,20 +161,25 @@
       <a href="designer.html">Web Designer</a>
     </nav>    
   </header>  
-  <main>
-    <img src="images/news.png" alt="Eniment Banner" class="banner" />
-    <h1>Latest News</h1>
-    <section class="news-item">
+
+  <main class="testimonial-container" tabindex="0">
+    <img src="images/news.png" alt="Eniment News Banner" class="banner" />
+    <h1>News</h1>
+
+    <div class="news-item">
       <time datetime="2025-06-01">June 1, 2025</time>
       <p><strong>New Shirt Collection Launching Soon!</strong> Our latest shirt designs drop next month — featuring modern fits, vibrant colors, and premium fabrics tailored for comfort and style. Stay tuned!</p>
-    </section>
-    
-    <section class="news-item">
+    </div>
+
+    <div class="news-item">
       <time datetime="2025-05-15">May 15, 2025</time>
-      <p><strong>Restock Alert:</strong> Customer-favorite preloved shirts are back! Check out our <a href="https://www.facebook.com/enimentoriginals" target="_blank" rel="noopener noreferrer" class="fb-link">Facebook page</a> for the latest restocks, sizes, and special offers.</p>
-    </section>
-    
+      <p><strong>Restock Alert:</strong> Customer-favorite preloved shirts are back! Check out our 
+        <a href="https://www.facebook.com/enimentoriginals" target="_blank" rel="noopener noreferrer">Facebook page</a> 
+        for the latest restocks, sizes, and special offers.
+      </p>
+    </div>
   </main>
+
   <footer>
     <p>Copyright © 2025 Eniment</p>
   </footer>
