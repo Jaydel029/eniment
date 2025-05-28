@@ -30,62 +30,71 @@
     nav {
       margin-top: 0.5rem;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+      padding: 0 1rem;
     }
 
     nav a {
       color: #ddd;
       text-decoration: none;
-      margin: 0 0.7rem;
       font-weight: 600;
       font-size: 0.9rem;
       transition: color 0.3s ease;
     }
 
     nav a:hover,
-    nav a:focus {
+    nav a:focus,
+    nav a[aria-current="page"] {
       color: #ff6600;
       outline: none;
     }
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      text-align: center;
+    .testimonial-container {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: #fdf6f0;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(255, 102, 0, 0.12);
+      color: #222;
+      font-weight: 500;
     }
 
-    .banner {
+    .testimonial-container img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin-bottom: 2rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
 
-    h1 {
+    .testimonial-container h1 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #222;
-      letter-spacing: 1.2px;
+      margin-top: 0.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #000;
     }
 
     .testimonial {
-      background-color: #f9f9f9;
+      background-color: #fff;
       border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      font-style: italic;
-      color: #555;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       position: relative;
+      font-style: italic;
+      color: #444;
     }
 
     .testimonial::before {
       content: "“";
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #ff6600;
       position: absolute;
       top: 10px;
@@ -95,7 +104,7 @@
 
     .testimonial::after {
       content: "”";
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: #ff6600;
       position: absolute;
       bottom: 10px;
@@ -104,11 +113,11 @@
     }
 
     .author {
-      margin-top: 1rem;
+      text-align: right;
       font-weight: 700;
       color: #222;
       font-style: normal;
-      text-align: right;
+      margin-top: 1rem;
     }
 
     footer {
@@ -118,6 +127,31 @@
       color: #555;
       font-size: 0.9rem;
       margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .testimonial-container {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem;
+      }
+
+      .testimonial-container h1 {
+        font-size: 1.6rem;
+      }
+
+      .testimonial {
+        padding: 1rem;
+      }
+
+      .testimonial::before,
+      .testimonial::after {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
@@ -139,8 +173,9 @@
       <a href="designer.html">Web Designer</a>
     </nav>    
   </header>  
-  <main>
-    <img src="images/testimonial.png" alt="Eniment Banner" class="banner" />
+
+  <main class="testimonial-container" tabindex="0">
+    <img src="images/testimonial.png" alt="Eniment Banner" />
     <h1>Testimonials</h1>
     <div class="testimonial">
       I love the quality and unique finds at Eniment! It’s now my favorite place to shop.
@@ -151,6 +186,7 @@
       <div class="author">- Mark V.</div>
     </div>
   </main>
+
   <footer>
     <p>Copyright © 2025 Eniment</p>
   </footer>
